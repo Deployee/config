@@ -26,7 +26,7 @@ class ConfigLocator
             foreach(self::$possibleConfigFileNames as $possibleConfigFileName){
                 $expectedFilepath = $expectedDir . DIRECTORY_SEPARATOR . $possibleConfigFileName;
                 if(is_file($expectedFilepath)){
-                    return realpath($expectedDir) . DIRECTORY_SEPARATOR;
+                    return realpath($expectedDir) . DIRECTORY_SEPARATOR . $possibleConfigFileName;
                 }
             }
         }
