@@ -10,4 +10,10 @@ interface ConfigInterface
      * @return mixed
      */
     public function get($name, $default = null);
+
+    /**
+     * @param string $name
+     * @param mixed $value
+     */
+    public function set(string $name, $value);
 }

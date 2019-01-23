@@ -43,4 +43,15 @@ class Config implements ConfigInterface
     {
         return $this->params[$name] ?? $default;
     }
+
+    /**
+     * @param string $name
+     * @param mixed $value
+     */
+    public function set(string $name, $value)
+    {
+        $this->params[$name] = $value;
+    }
+
+
 }
